@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Property Listings</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .container {
+      padding: 15px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .search-box {
+      margin: 15px 0;
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 12px;
+    }
+
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      color: green;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .location {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background: #25D366;
+    }
+
+    .btn:hover {
+      background: #1ebe5d;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: #3b5bdb;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #666;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🏠 Dream Properties</h1>
+  <p>Find your perfect home with verified listings</p>
+</header>
+
+<div class="container">
+
+  <div class="search-box">
+    <input type="text" placeholder="Search location, budget, type..." />
+  </div>
+
+  <div class="grid">
+
+    <!-- CARD 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1560185007-c5ca9d2c014d" />
+      <div class="card-body">
+        <div class="badge">For Rent</div>
+        <div class="title">2BHK Modern Apartment</div>
+        <div class="price">₹12,000 / month</div>
+        <div class="location">📍 Vijayawada, MG Road</div>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%202BHK%20Apartment">💬 Contact on WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" />
+      <div class="card-body">
+        <div class="badge">For Sale</div>
+        <div class="title">Luxury 3BHK Villa</div>
+        <div class="price">₹65 Lakhs</div>
+        <div class="location">📍 Guntur Highway</div>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%203BHK%20Villa">💬 Contact on WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+      <div class="card-body">
+        <div class="badge">For Rent</div>
+        <div class="title">1BHK Studio Flat</div>
+        <div class="price">₹7,500 / month</div>
+        <div class="location">📍 Benz Circle</div>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%201BHK%20Studio">💬 Contact on WhatsApp</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Dream Properties | Powered by Digital Listing System
+</footer>
+
+</body>
+</html>
