@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Details</title>
+
+<style>
+body { font-family:Arial; margin:0; background:#f4f6fb; }
+
+header {
+  background:#1e3c72;
+  color:white;
+  padding:15px;
+}
+
+.container {
+  max-width:800px;
+  margin:auto;
+  padding:15px;
+}
+
+img {
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+.price { color:green; font-size:18px; font-weight:bold; }
+
+.btn {
+  display:block;
+  background:#25D366;
+  color:white;
+  text-align:center;
+  padding:12px;
+  border-radius:10px;
+  text-decoration:none;
+  margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" style="color:white;text-decoration:none;">⬅ Back</a>
+</header>
+
+<div class="container">
+
+  <div id="content"></div>
+
+</div>
+
+<script>
+const data = {
+  1: {
+    title: "2BHK Modern Apartment",
+    price: "₹12,000 / month",
+    desc: "Beautiful apartment with ventilation, parking and water facility.",
+    img: "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d",
+    wa: "https://wa.me/91XXXXXXXXXX?text=Interested%20in%202BHK"
+  },
+
+  2: {
+    title: "Luxury Villa",
+    price: "₹65 Lakhs",
+    desc: "Premium villa with garden, parking and modern design.",
+    img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+    wa: "https://wa.me/91XXXXXXXXXX?text=Interested%20in%20Villa"
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+const p = data[id];
+
+document.getElementById("content").innerHTML = `
+  <h2>${p.title}</h2>
+  <img src="${p.img}">
+  <div class="price">${p.price}</div>
+  <p>${p.desc}</p>
+
+  <a class="btn" href="${p.wa}" target="_blank">💬 Contact on WhatsApp</a>
+`;
+</script>
+
+</body>
+</html>
